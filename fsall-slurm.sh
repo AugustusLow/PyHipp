@@ -18,7 +18,7 @@ import DataProcessingTools as DPT; \
 lfall = DPT.objects.processDirs(dirs=None, exclude=['*eye*', '*mountains*'], objtype=pyh.FreqSpectrum, saveLevel=1); \
 lfall.save(); \
 hfall = DPT.objects.processDirs(dirs=None, exclude=['*eye*', '*mountains*'], objtype=pyh.FreqSpectrum, loadHighPass=True, pointsPerWindow=3000, saveLevel=1); \
-hfall.save();
+hfall.save();"
 
 aws sns publish --topic-arn arn:aws:sns:ap-southeast-1:768155894766:awsnotify --message "FSJobDone"
 
